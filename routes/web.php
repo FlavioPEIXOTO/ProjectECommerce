@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User as User;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index', function () {
+    return view('index');
+});
+
+Route::get('/produit', function () {
+    return view('produit');
+});
+
+Route::get('/inscription', 'App\Http\Controllers\InscriptionController@formulaire');
+Route::post('/inscription', 'App\Http\Controllers\InscriptionController@inscription');
