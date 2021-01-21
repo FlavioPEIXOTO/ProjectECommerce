@@ -1,11 +1,6 @@
 @extends('layout')
 
 <div class="container">
-	<div class="row text-center mb-4">
-		<div class="col-md-12">
-		    <h2>GamingShop</h2>
-		</div>
-	</div>
 	<div class="row text-center">
 	    <div class="col-md-6 offset-md-3">
 	        <div class="card">
