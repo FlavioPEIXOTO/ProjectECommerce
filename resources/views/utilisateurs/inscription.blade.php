@@ -6,7 +6,7 @@
 	        <div class="card">
 	            <div class="card-body">
 	                <div class="login-title">
-	                    <h4>Log In</h4>
+	                    <h4>Inscrivez-vous dès maintenant</h4>
 	                </div>
 	                <div class="login-form mt-4">
 	                    <form>
