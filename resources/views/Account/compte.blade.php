@@ -6,4 +6,7 @@
 
     <p>Vous êtes bien enregistré </p>
 </div>
+
+<a href="/signout" class="button">Sign Out</a>
+
 @endsection

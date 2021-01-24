@@ -26,10 +26,10 @@ class ConnexionController extends Controller
 
 
         if($result){
-            return "You did it";
+            return redirect('/compte');
         }
         else{
-            return "Sa marche pas...";
+            return "Les informations renseignés sont erronnées";
         }
 
         // return back()->withErrors([

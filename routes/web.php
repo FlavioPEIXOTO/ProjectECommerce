@@ -26,6 +26,14 @@ Route::get('/produit', function () {
     return view('produit');
 });
 
+Route::group([
+    'middleware' => 'App\Http\Middleware\Auth',
+], function(){
+    Route::get('/compte', 'App\Http\Controllers\AccountController@compte');
+    
+    Route::get('/signout', 'App\Http\Controllers\AccountController@deconnexion');
+});
+
 Route::get('/inscription', 'App\Http\Controllers\InscriptionController@formulaire');
 Route::post('/inscription', 'App\Http\Controllers\InscriptionController@inscription');
 

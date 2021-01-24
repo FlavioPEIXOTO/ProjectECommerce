@@ -1,5 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
 *{
     margin: 0px;
 }
@@ -168,3 +167,110 @@ ul ul .linkSidebar {
 #img_marioK{
     height: 159px;
 }
+.login-img img {width:10%; max-height:20%;}
+
+.container-marg{
+    margin-bottom: 5% ;
+}
+
+.sectHeader{
+    position: fixed;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #ECEBE6;
+    /* color: #7A6458; */
+    color: #715639;
+
+}
+
+.logo{
+    /* background-image: url("logo2.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 210px;
+    height: 170px;
+}
+
+#titleHeader{
+    /* text-transform: uppercase; */
+    font-family: 'Copperplate Gothic Bold', sans-serif;
+}
+
+.searchHeader{
+    /* align-items: center; */
+    text-align: center; 
+    display: inline-block;
+    flex-direction: column;
+    vertical-align: top;
+    width: 100%;
+
+}
+
+.lienHeader{
+    color: #715639;
+    text-decoration: none;
+    font-size: 18px;
+        /* margin-top: 30px; */
+    margin: 40px 50px 0px 30px;
+    justify-content: space-around;
+    /* border: 2px black solid; */
+}
+
+.lienHeader:hover{
+    color: black;
+    border: 2px black solid;
+}
+
+#gameSearch{
+    height: 35px;
+}
+#buttonSearch{
+    width: 35px;
+    height: 35px;
+}
+
+#compte{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #ECEBE6;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    width: 100%;
+    z-index: 2;
+    padding: 14px;
+}
+
+.lienFooter{
+    margin: auto 30px;
+    font-size: 15px;
+
+}
+
+.textFooter{
+    color: #715639;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
+
