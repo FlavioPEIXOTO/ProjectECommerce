@@ -1,0 +1,23 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #ECEBE6;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    width: 100%;
+    z-index: 2;
+    padding: 14px;
+}
+
+.lienFooter{
+    margin: auto 30px;
+    font-size: 15px;
+
+}
+
+.textFooter{
+    color: #715639;
+    text-decoration: none;
+}

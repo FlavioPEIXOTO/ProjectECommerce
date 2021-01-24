@@ -28,3 +28,6 @@ Route::get('/produit', function () {
 
 Route::get('/inscription', 'App\Http\Controllers\InscriptionController@formulaire');
 Route::post('/inscription', 'App\Http\Controllers\InscriptionController@inscription');
+
+Route::get('/connexion', 'App\Http\Controllers\ConnexionController@formulaire');
+Route::post('/connexion', 'App\Http\Controllers\ConnexionController@connexion');

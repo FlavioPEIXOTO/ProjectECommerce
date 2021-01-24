@@ -1,5 +1,19 @@
-<header class="page-header">
+<header>
 
-    <h1>Nom du site</h1>
+    <section class="sectHeader">
+        <div class="logoHeader">
+            <a href="index.html"> <img class="logo"> </a>
+        </div>
+        <div class="searchHeader">
+            <h1 id="titleHeader">GamingShop</h1>
+            {{-- 'url_image' => cloudinary()->upload(request()->file('file')->getRealPath()->getSecurePath()); --}}
+            <a class="lienHeader" href="jeux.html"> Jeux </a>
+            <a class="lienHeader" href="consoles.html"> Consoles </a>
+            <a class="lienHeader" href="accessoires.html"> Accessoires </a>
+            <input class="lienHeader" id="gameSearch" type="search" name="search">
+            <button class="lienHeader" id="buttonSearch"> <i class="fas fa-search"></i> </button>
+            <a class="lienHeader" href="Compte.html" title="Mon compte"> <i class="far fa-user" ></i> Compte</a> <!-- Récuper l'identifiant-->
+        </div>
+    </section>
 
 </header>

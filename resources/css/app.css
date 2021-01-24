@@ -1,2 +1,16 @@
+*{
+    margin: 0px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: red;
+}
+
 @import url("style.css");
 @import url("inscription.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("meadiaqueries.css");
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";

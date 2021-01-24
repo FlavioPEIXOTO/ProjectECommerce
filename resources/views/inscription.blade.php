@@ -1,6 +1,7 @@
 @extends('layout')
 
-<div class="container">
+
+@section('contenu')
 	<div class="row text-center">
 	    <div class="col-md-6 offset-md-3">
 	        <div class="card">
@@ -9,34 +10,38 @@
 	                    <h4>Inscrivez-vous dès maintenant</h4>
 	                </div>
 	                <div class="login-form mt-4">
-	                    <form>
+                      <form action="/inscription" method="POST">
+                        {{ csrf_field() }}
                         <div class="form-row">
 
                             <!--Prénom + Nom-->
                             <div class="form-group col-md-12">
-                              <input id="prenom" name="Prenom" placeholder="Prenom" class="form-control" type="text">
+                              <input type="string" name="first_name" id="first_name" placeholder="Prenom" class="form-control">
                             </div>
                             <div class="form-group col-md-12">
-                              <input id="nom" name="Nom" placeholder="Nom" class="form-control" type="text">
+                              <input type="string" name="name" id="name" placeholder="Nom" class="form-control">
                             </div>
 
                             <!--Date de naissance-->
                             <div class="form-group col-md-12">
-                                <input type="date" id="datenaissance" name="DateNaissance" value="2018-07-22" min="1920-01-01">
+                                <input type="date" name="birth_date" id="birth_date" value="2018-07-22" min="1920-01-01">
                             </div>
 
                             <!--Email-->
                             <div class="form-group col-md-12">
-                                <input id="email" name="Email" placeholder="Adresse Email" class="form-control" type="text">
+                                <input type="email" name="email" id="email"  placeholder="Adresse Email" class="form-control">
                             </div>
 
                             <!--Mot de passe-->
                             <div class="form-group col-md-12">
-                              <input type="pass" class="form-control" id="pass" placeholder="Password">
+                              <input type="password" name ="password" id="password" class="form-control" placeholder="Mot de passe">
+                            </div>
+                            <div class="form-group col-md-12">
+                              <input type="password" name="password_confirm" id="password_confirm" class="form-control" placeholder="Confirmation Mot de passe">
                             </div>
                           </div>
-                         <div class="form-row">
-                        <div class="form-group">
+                            <div class="form-row">
+                              <div class="form-group">
                                 <div class="form-check">
                                   <input class="form-check-input" type="checkbox" value="" id="updatecheck1">
                                   <label class="form-check-label" for="updatecheck1">
@@ -44,11 +49,11 @@
                                     
                                   </label>
                                 </div>
-                              </div>
-                    </div>                        
+                                </div>
+                            </div>                        
                         
                         <div class="form-row">
-                            <button type="button" class="btn btn-danger btn-block">Submit</button>
+                            <input type="submit" name="submit" class="btn btn-danger btn-block" value="S'inscrire">
                         </div>
                     </form>
 	                </div>
@@ -57,3 +62,4 @@
 	    </div>
 	</div>
 </div>
+@endsection
