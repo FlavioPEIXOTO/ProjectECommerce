@@ -16,7 +16,7 @@ class Auth{
     public function handle(Request $request, Closure $next)
     {
         if(auth()->guest()){
-            flash("You have to be connected to access to this page")->error();
+            // flash("You have to be connected to access to this page")->error();
 
             return redirect('/connexion');
         }

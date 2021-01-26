@@ -8,7 +8,9 @@ use App\Models\User as User;
 class InscriptionController extends Controller
 {
     public function formulaire(){
-        return view('inscription');
+        return view('inscription', [
+            'user' =>auth()->logout(),
+        ]);
     }
 
     public function inscription(){

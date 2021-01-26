@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUrlImageToPostsTable extends Migration
+class CreateAchatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddUrlImageToPostsTable extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->text('url_image')->default('');
+        Schema::create('achats', function (Blueprint $table) {
+            $table->id();
+            $table->integer('user_id');
+            $table->integer('jeux_id');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddUrlImageToPostsTable extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $tables->dropColumn('url_image');
-        });
+        Schema::dropIfExists('achats');
     }
 }

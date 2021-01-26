@@ -28,6 +28,11 @@
                                 <input type="submit" name="submit" class="btn btn-danger btn-block" value="Connexion">
                             </div>
 
+                            <div class="texte-co">
+                            <p>Pas encore de compte ?</p>
+                            <a href="inscription" title="Pour s'inscrire"><p>Inscrivez-vous !</p></a>
+                            </div>
+
                         </form>
                     </div>
                 </div>

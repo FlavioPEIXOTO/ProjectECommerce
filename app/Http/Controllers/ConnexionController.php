@@ -8,6 +8,7 @@ class ConnexionController extends Controller
 {
 
     public function formulaire(){
+        
         return view('utilisateurs/connexion');
     }
 
@@ -26,10 +27,15 @@ class ConnexionController extends Controller
 
 
         if($result){
-            return redirect('/compte');
+            if(request('email') == 'flavio.peixoto@ynov.com'){
+                return redirect('/compteAdmin');
+            }
+            else{
+                return redirect('/compte');
+            }
         }
         else{
-            return "Les informations renseignés sont erronnées";
+            return back();
         }
 
         // return back()->withErrors([

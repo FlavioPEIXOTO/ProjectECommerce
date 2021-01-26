@@ -5,19 +5,21 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .main{
     /* margin-top: 30px; */
     display: flex;
     flex-direction: row;
+    /* background-color: #ECEBE6; */
+
 }
 
                                                                 /* SIDEBAR */
 
 
-.linkSidebar, .linkSidebar:hover, .linkSidebar:focus {
+a, a:hover, a:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
@@ -27,27 +29,11 @@ body{
     z-index: 10;
 }
 
-.navbar {
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-btn {
-    box-shadow: none;
-    outline: none !important;
-    border: none;
-}
-
-
 #sidebar {
     min-width: 210px;
     max-width: 210px;
     background: #46829e;
-    color: #fff;
+    color:white;
     transition: all 0.3s;
     height: 100%;
     position: relative;
@@ -56,56 +42,32 @@ body{
 
 }
 
-#sidebar.active {
-    margin-left: -250px;
-}
-
 #sidebar .sidebar-header {
     padding: 20px;
     background: #46829e;
 }
 
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li .linkSidebar {
+#sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    color: white;
+    text-decoration: none;
 }
-#sidebar ul li .linkSidebar:hover {
+
+#sidebar ul li a p{
+    text-align: center;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+#sidebar ul li a:hover {
     color: #2544c2;
     background: #fff;
 }
 
-#sidebar ul li.active > .linkSidebar, 
-.linkSidebar[aria-expanded="true"] {
-    color: #fff;
-    background: #46829e;
-}
-
-
-.linkSidebar[data-toggle="collapse"] {
+a[data-toggle="collapse"] {
     position: relative;
-}
-
-.linkSidebar[aria-expanded="false"]::before, .linkSidebar[aria-expanded="true"]::before {
-    content: '\e259';
-    display: block;
-    position: absolute;
-    right: 20px;
-    font-family: 'Glyphicons Halflings';
-    font-size: 0.6em;
-}
-.linkSidebar[aria-expanded="true"]::before {
-    content: '\e260';
 }
 
 .dropdown-toggle::after {
@@ -116,37 +78,65 @@ body{
     transform: translateY(-50%);
 }
 
-ul ul .linkSidebar {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #46829e;
-}
-
-.linkSidebar.article, 
-.linkSidebar.article:hover {
-    background: #46829e  !important;
-    color: #fff !important;
-}
-
-#content {
-    width: 100%;
-    padding: 20px;
-    min-height: 100vh;
-    transition: all 0.3s;
-}
-
 .curseurPrix{
     display: flex;
     flex-direction: column;
 }
 
-                                                            /* FIN SIDEBAR  */
+#range{
+    width: 100%;
+}
+
+#sidebar_price{
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: white;
+}
+
+#sidebar a label:hover {
+    color: #2544c2;
+    background: #fff;
+}
+
+                                                /* FIN SIDEBAR  */
+
+                                                /* CAROUSEL */
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 15rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 35rem;
+    background-color: rgb(0, 0, 0);
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    /* transform: translate(50%, 50%); */
+    min-width: 40%;
+    height: 33rem;
+  }
+
+
+                                                            /* Listes des produits */
+
 
 .titleIndex{
     text-transform: uppercase;
     text-align: center;
 }
-
+ 
 .prez{
     display: flex;
     flex-direction: row;
@@ -157,16 +147,16 @@ ul ul .linkSidebar {
 }
 
 .card-img{
-    width: 40%;
+    width: 60%;
 }
 
 .img_accueil{
-    width: 40%;
+    width: 12rem;
+    height: 12rem;
 }
 
-#img_marioK{
-    height: 159px;
-}
+
+
 .login-img img {width:10%; max-height:20%;}
 
 .container-marg{
@@ -225,17 +215,18 @@ ul ul .linkSidebar {
 
 #gameSearch{
     height: 35px;
+    margin-right: 0;
 }
 #buttonSearch{
     width: 35px;
     height: 35px;
 }
 
-#compte{
+/* #compte{
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
-}
+} */
 .footer{
     display: flex;
     flex-direction: row;
@@ -260,10 +251,45 @@ ul ul .linkSidebar {
     text-decoration: none;
 }
 
+                                            /* MEDIAQUERIES */
+                        /* Header */
 @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
+    #titleHeader{
+        font-size: 26px;
     }
+    .logo {
+        width: 180px;
+        height: 140px;    
+    }
+    .lienHeader{
+        font-size: 14px;
+        margin: 30px 25px 0px 20px;
+        justify-content: initial;
+    }
+    .lienHeader:hover{
+        border: initial;
+    }
+    #gameSearch{
+        height: 18px;
+        width: 85px;
+    }
+    /* .far {
+        display: none;
+    } */
+    #buttonSearch{
+        width: 22px;
+        height: 22px;
+    }
+
+}
+                        
+                                                /* Sidebar */
+@media (max-width: 768px) {
+    #sidebar{
+        min-width: 180px;
+        max-width: 180px;  
+    }
+
     #sidebar.active {
         margin-left: 0;
     }
@@ -271,6 +297,110 @@ ul ul .linkSidebar {
         display: none;
     }
 }
+                        
+                                                /* Carousel */
+                            
+@media (max-width: 768px) {
+    .featurette-heading {
+        font-size: 50px;
+    }
+    .carousel-item {
+        height: 25rem;
+        }
+    .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 24%;
+        min-width: 40%;
+        height: 23rem;
+    }
 
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}
+/*--------------------------- ADMIN COMPTE-------------------*/
+
+
+
+/*----------------------------USER COMPTE---------------------*/
+
+.section-user{
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-jeux-achetes{
+    width: 100%;
+    display: block;
+    margin: 20px;
+}
+
+/*-------------------------------FORMULAIRE AJOUT JEUX---------------------------*/
+
+.title-jeux{
+    font-size: 36px;
+}
+
+
+.section-content{
+    text-align: center; 
+
+}
+#contact{
+    font-family: 'Teko', sans-serif;
+    padding-top: 60px;
+    width: 100%;
+    width: 100vw;
+    height: 800px;
+    background: #3a6186; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #413d1f , #d4bac0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color : #fff;    
+}
+.contact-section{
+    padding-top: 40px;
+}
+.contact-section .col-md-6{
+    width: 50%;
+}
+
+.form-line{
+    border-right: 1px solid #B29999;
+}
+
+.form-group{
+    margin-top: 10px;
+}
+
+    label{
+    font-size: 1.3em;
+    line-height: 1em;
+    font-weight: normal;
+}
+
+    .form-control{
+    font-size: 1.3em;
+    color: #080808;
+}
+
+    textarea.form-control {
+        height: 135px;
+        /* margin-top: px;*/
+}
+
+    .submit{
+    font-size: 1.1em;
+    float: right;
+    width: 150px;
+    background-color: transparent;
+    color: #fff;
+
+}
+  
 /* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
 

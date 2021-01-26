@@ -55,6 +55,12 @@
                         <div class="form-row">
                             <input type="submit" name="submit" class="btn btn-danger btn-block" value="S'inscrire">
                         </div>
+
+                        <div class="texte-co">
+                          <p>Vous avez déjà un compte ?</p>
+                          <a href="connexion" title="Pour se connecter"><p>Connectez-vous !</p></a>
+                        </div>
+
                     </form>
 	                </div>
 	            </div>

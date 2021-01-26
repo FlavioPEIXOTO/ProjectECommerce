@@ -1,11 +1,72 @@
+
+                                            /* MEDIAQUERIES */
+                        /* Header */
 @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
+    #titleHeader{
+        font-size: 26px;
     }
+    .logo {
+        width: 180px;
+        height: 140px;    
+    }
+    .lienHeader{
+        font-size: 14px;
+        margin: 30px 25px 0px 20px;
+        justify-content: initial;
+    }
+    .lienHeader:hover{
+        border: initial;
+    }
+    #gameSearch{
+        height: 18px;
+        width: 85px;
+    }
+    /* .far {
+        display: none;
+    } */
+    #buttonSearch{
+        width: 22px;
+        height: 22px;
+    }
+
+}
+                        
+                                                /* Sidebar */
+@media (max-width: 768px) {
+    #sidebar{
+        min-width: 180px;
+        max-width: 180px;  
+    }
+
     #sidebar.active {
         margin-left: 0;
     }
     #sidebarCollapse span {
         display: none;
+    }
+}
+                        
+                                                /* Carousel */
+                            
+@media (max-width: 768px) {
+    .featurette-heading {
+        font-size: 50px;
+    }
+    .carousel-item {
+        height: 25rem;
+        }
+    .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 24%;
+        min-width: 40%;
+        height: 23rem;
+    }
+
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
     }
 }
