@@ -38,6 +38,20 @@ Route::group([
 
     Route::get('/signout', 'App\Http\Controllers\AccountController@deconnexion');
 
+    Route::get('/Users', 'App\Http\Controllers\AccountController@Users');
+
+    Route::get('/Achats', 'App\Http\Controllers\AccountController@Achats');
+
+});
+
+
+
+
+Route::group([
+    'middleware' => 'App\Http\Middleware\Auth',
+], function(){
+    Route::get('/Produit/{id}', 'App\Http\Controllers\AchatController@ProduitPage')->name('produit.Page');
+    Route::post('/Produit/{id}', 'App\Http\Controllers\AchatController@confirmAjoutPanier'); //->name('confirm.AjoutPanier');
 });
 
 
@@ -64,6 +78,7 @@ Route::group([
     
 });
 
+Route::get('/produit', 'App\Http\Controllers\AchatController@ProduitPage');
 //--------------------------FORMULAIRES CONNEXION INSCRIPTION--------------------------//
 Route::get('/inscription', 'App\Http\Controllers\InscriptionController@formulaire');
 Route::post('/inscription', 'App\Http\Controllers\InscriptionController@inscription');

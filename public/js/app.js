@@ -1834,6 +1834,30 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/algoAdmin.js":
+/*!***********************************!*\
+  !*** ./resources/js/algoAdmin.js ***!
+  \***********************************/
+/***/ (() => {
+
+function code_activ(code) {
+  for (i = 0; i < 5; i++) {
+    for (j = 0; j < 4; j++) {
+      nbr = Math.floor(Math.random() * 10);
+      nbr.toString();
+      code += nbr;
+    }
+
+    if (i != 4) {
+      code += "-";
+    }
+  }
+
+  return code;
+}
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -1843,6 +1867,8 @@ module.exports = {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./main */ "./resources/js/main.js");
+
+__webpack_require__(/*! ./algoAdmin */ "./resources/js/algoAdmin.js");
 
 /***/ }),
 

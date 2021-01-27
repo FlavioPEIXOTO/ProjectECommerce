@@ -12,23 +12,31 @@ class AccountController extends Controller
 
         $user = auth()->user();
         $connect = auth()->user();
+        $id = $user->id;
 
-        return view('Account/compte', compact('user', 'connect'));
+        return view('Account/compte', compact('user', 'connect', 'id'));
     }
 
     public function compteAdmin(){
 
         $utilisateurs = User::all();
+        $jeux = Jeux::all();
         $connect = auth()->user();
 
-        return view('Admin/compteAdmin', compact('utilisateurs', 'connect'));
+        return view('Admin/compteAdmin', compact('utilisateurs','jeux', 'connect'));
+    }
+
+    public function Users(){
+        $utilisateurs = User::all();
+
+        return view('Admin/Users', compact('utilisateurs'));
     }
 
     public function modifierUser(){
         $id = request('id');
         $user = User::where('id', $id)->firstOrFail();
 
-        return view('Admin/modifUser', compact('user'));
+        return view('Admin/modifUsers', compact('user'));
     }
 
     public function confirmModif(){
@@ -56,6 +64,8 @@ class AccountController extends Controller
         $result = request()->validate([
             'nom'=>['required'],
             'description'=>['required'],
+            'date_sortie'=>['required'],
+            'editeur_dev'=>['required'],
             'photo',
             'quantite'=>['required'],
             'prix'=>['required'],
@@ -79,6 +89,8 @@ class AccountController extends Controller
         $jeu = new Jeux;
         $jeu->nom = request('nom');
         $jeu->description = request('description');
+        $jeu->date_sortie = request('date_sortie');
+        $jeu->editeur_dev = request('editeur_dev');
         $jeu->photo = request('photo');
         $jeu->quantite = request('quantite');
         $jeu->prix = request('prix');
@@ -141,6 +153,11 @@ class AccountController extends Controller
         $jeu = Jeux::where('id', $id)->firstOrFail();
 
         return redirect('compteAdmin');
+    }
+
+    public function Achats(){
+
+        return view('Admin/Achats');
     }
 
 

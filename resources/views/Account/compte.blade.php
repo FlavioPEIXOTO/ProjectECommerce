@@ -1,44 +1,35 @@
 @extends('layout')
 
 @section('contenu')
-<div>
-    <h2>Compte</h2>
 
-    <p>Vous êtes bien enregistré </p>
+<div class="welcome">
+    <h2>Bienvenue ! Vous pouvez maintenant profiter de voter compte GamingShop !</h2>
 </div>
 
 <section class="section-user">
 
     <!--Bloc informations Utilisateur-->
-    <div class="card border-secondary mb-3" style="max-width: 40rem;">
-        <div class="card-header"><h3>Informations utilisateur<h3></div>
-            <div class="card-body text-secondary">
-                <h5 class="card-title">Nom : {{$connect->name}} {{$user->first_name}}</h5>
-                <hr />
-                <h5 class="card-title">Date de naissance : {{$user->birth_date}}</h5>
-                <hr />
-                <h5 class="card-title">Email : {{$user->email}}</h5>
-                <hr />
-            </div>
+    <div class="card border-secondary mb-3" style="max-width: 40rem;" id="card_compte">
+        <div class="card-header"><h3>Informations utilisateur : <i class="far fa-user" id="compte_logo"></i><h3></div>
+        <div class="card-body text-secondary">
+            <h5 class="card-title">Nom : {{$connect->name}} {{$user->first_name}}</h5>
+            <hr />
+            <h5 class="card-title">Date de naissance : {{$user->birth_date}}</h5>
+            <hr />
+            <h5 class="card-title">Email : {{$user->email}}</h5>
+            <hr />
+            <a href="/signout"><button class="button_SignOut">Sign Out</button></a>
         </div>
     </div>
 
-    <div>
-
+    <div class="col-lg-4 border-secondary mb-3">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="img/logo2.jpg">
+        <h3 class="welcome">GamingShop</h3>
+        <p class="card-title">Vous pouvez des maintenant accéder à tout nos produits !</p>
+        <p><a class="button_SignOut" href="index" role="button">Accueil</a></p>
     </div>
+
 </section>
 
-<section class="section-jeux-achetes">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-</section>
-
-<a href="/signout" class="button">Sign Out</a>
 
 @endsection

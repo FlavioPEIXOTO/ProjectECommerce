@@ -12,10 +12,10 @@
 }
 
 .logo{
-    /* background-image: url("logo2.jpg"); */
+    /* background-image: url("../../public/img/logo2.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 210px;
+    width: 195px;
     height: 170px;
 }
 
@@ -38,15 +38,16 @@
     color: #715639;
     text-decoration: none;
     font-size: 18px;
-        /* margin-top: 30px; */
+    /* margin-top: 30px; */
     margin: 40px 50px 0px 30px;
     justify-content: space-around;
-    /* border: 2px black solid; */
+    opacity: 0.4;
 }
 
 .lienHeader:hover{
-    color: black;
-    border: 2px black solid;
+    opacity: 1;
+    color: #715639;
+    text-decoration: none;
 }
 
 #gameSearch{
@@ -63,3 +64,13 @@
     height: 30px;
     background-repeat: no-repeat;
 } */
+
+#compte_logo{
+    font-size: 2rem;
+}
+
+#select_header{
+    border: none;
+    background-color: #ECEBE6;
+    font-size: 18px;
+}

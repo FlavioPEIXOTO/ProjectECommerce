@@ -17,6 +17,8 @@ class CreateJeuxesTable extends Migration
             $table->increments('id');
             $table->string('nom')->unique();
             $table->text('description');
+            $table->date('date_sortie');
+            $table->text('editeur_dev');
             $table->string('photo')->nullable();
             $table->integer('quantite');
             $table->integer('prix');

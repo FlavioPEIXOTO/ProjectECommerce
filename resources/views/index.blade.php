@@ -4,15 +4,18 @@
 
     <section class="main">
 
-        <section class="navCategories"> <!--DEBUT SIDEBAR-->
+        <!--DEBUT SIDEBAR-->
+        <section class="navCategories"> 
 
             <nav id="sidebar">
+                <!--Block title SIDEBAR-->
                 <div class="sidebar-header">
                     <h3>Achats rapide</h3>
                 </div>
 
                 <ul class="list-unstyled components">
                     <li class="active">
+                        <!--Blog Dropdown SIDEBAR-->
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Console</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li><a href="#"><p>- PS5</p></a></li>
@@ -21,6 +24,7 @@
                         </ul>
                     </li>
                     <li>
+                        <!--Blog Dropdown SIDEBAR-->
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Jeux</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li><a href="#"><p>- PS5</p></a></li>
@@ -31,6 +35,7 @@
                         </ul>
                     </li>
                     <li>
+                        <!--Blog Dropdown SIDEBAR-->
                         <a href="#nextSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Genre</a>
                         <ul class="collapse list-unstyled" id="nextSubmenu">
                             <li><a href="#"><p>- Action</p></a></li>
@@ -66,26 +71,29 @@
                 </ol>
                 <div class="carousel-inner">
                 <div class="carousel-item">
-                    <img class="first-slide" src="../img/PS5.jpg" alt="First slide for PS5">
+                    {{-- Première slide --}}
+                    <img class="first-slide" src="../img/Halo5_xbox.jpg" alt="First slide for PS5">
                     <div class="container">
                     <div class="carousel-caption">
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Voir le Produit</a></p>
+                        <a class="btn btn-lg btn-primary" href="produit" role="button">Voir le Produit</a>
                     </div>
                     </div>
                 </div>
+                    {{-- Deuxième slide apparaît à chaque refresh --}}
                 <div class="carousel-item active">
                     <img class="second-slide" src="img/Hitman3_ps4.jpg" alt="Second slide for Hitman 3">
                     <div class="container">
                     <div class="carousel-caption">
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Voir le Produit</a></p>
+                        <a class="btn btn-lg btn-primary" href="produit" role="button">Voir le Produit</a>
                     </div>
                     </div>
                 </div>
                 <div class="carousel-item">
+                    {{-- Troisième slide --}}
                     <img class="third-slide" src="img/Fifa21_ps5.jpg" alt="Third slide for FIFA 5">
                     <div class="container">
-                    <div class="carousel-caption text-right">
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Voir le Produit</a></p>
+                    <div class="carousel-caption">
+                        <a class="btn btn-lg btn-primary" href="produit" role="button">Voir le Produit</a>
                     </div>
                     </div>
                 </div>
@@ -102,132 +110,132 @@
 
             
             <div class="top_index">
-                <h2 class="titleIndex">Les meilleurs jeux à prix réduit</h2> <!--Title Page Main-->
+                <!--Title Page Main-->
+                <h2 class="titleIndex">Les meilleurs jeux à prix réduit</h2> 
             </div>
 
 
             <!-- Listes des produits -->
-            <div class="row row-cols-1 row-cols-md-3 g-4" >
-                <!-- <div class="col"> -->
+            <div class="row row-cols-1 row-cols-md-3 g-0" >
                     <div class="card">
                         <div class="prez">
-                        <img src="../../storage/app/img/PS5.jpg" class="img_accueil" alt="PS5">
-                        <div class="card-body">
-                        <h5 class="card-title">PS5</h5>
-                        <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
+                            <img src="img/PS5.jpg" class="img_accueil" alt="PS5">
+                            <div class="card-body">
+                                <h5 class="card-title">PS5</h5>
+                                <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
-                    </div>
-                    <div class="card">
-                        <div class="prez">
-                        <img src="../../storage/app/img/PS5.jpg" class="img_accueil" alt="PS5">
-                        <div class="card-body">
-                        <h5 class="card-title">PS5</h5>
-                        <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                    <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src=".../.../storage/app/public/img/PS5.jpg" class="img_accueil" alt="PS5">
-                        <div class="card-body">
-                        <h5 class="card-title">PS5</h5>
-                        <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
+                            <img src="img/XboxSeriesX.jpg" class="img_accueil" alt="Xbox Series X">
+                            <div class="card-body">
+                                <h5 class="card-title">Xbox Series X</h5>
+                                <p class="card-text">La toute nouvelle console de chez Microsoft, la Xbox Series X</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src="img/PS5.jpg" class="img_accueil" alt="PS5">
-                        <div class="card-body">
-                        <h5 class="card-title">PS5</h5>
-                        <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
+                            <img src="img/Switch.jpg" class="img_accueil" alt="Switch5">
+                            <div class="card-body">
+                                <h5 class="card-title">Switch</h5>
+                                <p class="card-text">La toute nouvelle console de chez Nintendo, la Switch</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src="img/PS5.jpg" class="img_accueil" alt="PS5">
-                        <div class="card-body">
-                        <h5 class="card-title">PS5</h5>
-                        <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
+                            <img src="img/GTAV_ps4.jpg" class="img_accueil" alt="GTA">
+                            <div class="card-body">
+                                <h5 class="card-title">GTA V</h5>
+                                <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="{{route('produit.Page', ['id' => 1])}}" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src="img/PS5.jpg" class="img_accueil" alt="PS5">
-                        <div class="card-body">
-                        <h5 class="card-title">PS5</h5>
-                        <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
+                            <img src="img/FarCry6_xbox.jpg" class="img_accueil" alt="Far Cry 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Far Cry 6</h5>
+                                <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src="img/SpidermanMile_ps5.jpg" class="img_accueil" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Spider man Miles Morales</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <img src="img/Zelda_switch.jpg" class="img_accueil" alt="Zelda Breath of the Wild">
+                            <div class="card-body">
+                                <h5 class="card-title">Zelda Breath of the Wild</h5>
+                                <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src="img/Fifa21_xboxSeriesX.jpg" class="img_accueil" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">FIFA 21</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <img src="img/SpidermanMile_ps5.jpg" class="img_accueil" alt="Spider man Miles Morales">
+                            <div class="card-body">
+                                <h5 class="card-title">Spider man Miles Morales</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src="img/Hitman3_ps4.jpg" class="img_accueil" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Hitman 3</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <img src="img/Fifa21_xboxSeriesX.jpg" class="img_accueil" alt="FIFA 21">
+                            <div class="card-body">
+                                <h5 class="card-title">FIFA 21</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src="img/marioKart_switch.jpg" class="img_accueil" id="img_marioK" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Mario Kart 8 Deluxe</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <img src="img/Hitman3_ps4.jpg" class="img_accueil" alt="Hitman 3">
+                                <div class="card-body">
+                                <h5 class="card-title">Hitman 3</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src="img/theLastOfUsPart2.jpg" class="img_accueil" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title"> The last of Us Part II</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <img src="img/marioKart_switch.jpg" class="img_accueil" id="img_marioK" alt="Mario Kart 8 Deluxe">
+                            <div class="card-body">
+                                <h5 class="card-title">Mario Kart 8 Deluxe</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
-                        <img src="img/CallOfDutyBlackOps_ColdWar_xbox.jpg" class="img_accueil" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Call of Duty Black Ops Clod War</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <img src="img/theLastOfUsPart2.jpg" class="img_accueil" alt="The Last of Us 2">
+                            <div class="card-body">
+                                <h5 class="card-title"> The last of Us Part II</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
                         </div>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
-                    <a href="#" class="btn btn-primary">Acheter</a>
+                    <div class="card">
+                        <div class="prez">
+                            <img src="img/CallOfDutyBlackOps_ColdWar_xbox.jpg" class="img_accueil" alt="Call of Duty Black Ops Cold War">
+                            <div class="card-body">
+                                <h5 class="card-title">Call of Duty Black Ops Clod War</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
                     </div>
 
                 <!-- </div> -->

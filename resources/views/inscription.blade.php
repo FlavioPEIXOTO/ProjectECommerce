@@ -43,9 +43,9 @@
                             <div class="form-row">
                               <div class="form-group">
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="updatecheck1">
-                                  <label class="form-check-label" for="updatecheck1"  required>
-                                    <small>By submitting this form you agree to our <a href="#">terms and conditions </a> </small>
+                                  <input class="form-check-input" type="checkbox" value="" id="updatecheck1" required>
+                                  <label class="form-check-label" for="updatecheck1"  >
+                                    <small>By submitting this form you agree to our <a href="#">terms and conditions </a> </small >
                                     
                                   </label>
                                 </div>

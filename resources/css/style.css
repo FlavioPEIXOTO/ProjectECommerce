@@ -31,16 +31,16 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-    min-width: 210px;
-    max-width: 210px;
+    min-width: 195px;
+    max-width: 195px;
     background: #46829e;
     color:white;
     transition: all 0.3s;
     height: 100%;
+    position: fixed;
     position: relative;
-    margin-right: 15px;
     z-index: 10;
-
+    margin-bottom: 5px;
 }
 
 #sidebar .sidebar-header {
@@ -107,6 +107,7 @@ a[data-toggle="collapse"] {
   /* Carousel base class */
   .carousel {
     margin-bottom: 4rem;
+    width: 100%;
   }
 
   /* Since positioning the image, we need to help out the caption */
@@ -136,11 +137,25 @@ a[data-toggle="collapse"] {
 .titleIndex{
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: #46829e;
+}
+
+.row{
+    /* width: 100%; */
+    margin-right: 0;
+    margin-left: 0;
 }
  
 .prez{
     display: flex;
     flex-direction: row;
+}
+
+.card{
+    padding: 0;
+    margin: 4px auto;
 }
 
 .card-text{
@@ -155,5 +170,6 @@ a[data-toggle="collapse"] {
     width: 12rem;
     height: 12rem;
 }
+
 
 

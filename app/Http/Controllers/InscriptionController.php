@@ -30,6 +30,7 @@ class InscriptionController extends Controller
         $user->email = request('email');
         $user->birth_date = request('birth_date');
         $user->password = bcrypt(request('password'));
+        $user->solde = 50;
         $user->save();
         return view('utilisateurs/connexion');
     }

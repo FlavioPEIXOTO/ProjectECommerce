@@ -15,7 +15,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="mr-3">
                         <div class="text-white-75 small">UTILISATEURS</div>
-                        <div class="text-lg font-weight-bold"> nbr</div>
+                        <div class="text-lg font-weight-bold"> {{$utilisateurs->count()}}</div>
                     </div>
                     <a class="small text-white stretched-link" href="#">Voir détail</a>
                     <!--Possibilité de mettre une petite icone image-->
@@ -29,7 +29,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="mr-3">
                         <div class="text-white-75 small">JEUX VIDEOS EN VENTE</div>
-                        <div class="text-lg font-weight-bold">60</div>
+                        <div class="text-lg font-weight-bold">{{$jeux->count()}}</div>
                     </div>
                     <a class="small text-white stretched-link" href="#">Voir détail</a>
                     <!--Possibilité de mettre une petite icone image-->
@@ -67,35 +67,6 @@
     </div>
 </div>
 
-
-<section class="section-infos-users">
-    <h3>Gestion des comptes</h3>
-    <div>
-        <table class="table table-bordered table-hover dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
-            <thead>
-                <tr role="row">
-                    <td>ID</td>
-                    <td>PRENOM</td>
-                    <td>NOM</td>
-                    <td>DATE DE NAISSANCE</td>
-                    <td>EMAIL</td>
-                </tr>
-            </thead>
-                @foreach ($utilisateurs as $utilisateur)
-                    <tr>
-                        <td class="even">{{$utilisateur->id}}</td>
-                        <td class="odd">{{$utilisateur->first_name}}</td>
-                        <td class="even">{{$utilisateur->name}}</td>
-                        <td class="odd">{{$utilisateur->birth_date}}</td>
-                        <td class="even">{{$utilisateur->email}}</td>
-                        <td class="odd"><a href="{{route('infos.User', ['id' => $utilisateur->id])}}" class="button">Modifier</a></td>
-                    </tr>
-                @endforeach
-        </table>
-    </div>
-
-</section>
-
 <section style="display: flex; width=100%; margin: 20px; text-align:center; justify-content:center">
     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; margin : 30px;">
         <div class="card-header">Comptes Utilisateurs</div>
@@ -104,7 +75,7 @@
           <p class="card-text">Modifiez les informations des utilisateurs depuis ce menu</p>
         </div>
         <div class="card-footer">
-            <a href="#">Voir détails</a>
+            <a href="/Users">Voir détails</a>
         </div>
     </div>
     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; margin : 30px;">
@@ -118,13 +89,13 @@
         </div>
     </div>
     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; margin : 30px;">
-        <div class="card-header">Header</div>
+        <div class="card-header">Achats</div>
         <div class="card-body">
-          <h5 class="card-title">Secondary card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">Vu des achats</h5>
+          <p class="card-text">Ce menu permet le listing de tout les achats des utilisateurs.</p>
         </div>
         <div class="card-footer">
-            <a>Voir détails</a>
+            <a href="/Achats">Voir détails</a>
         </div>
     </div>
     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; margin : 30px;">

@@ -18,7 +18,7 @@
     <div class="card">
         <div class="card-body">
             <div class="login-title">
-                <h4>Connectez-vous</h4>
+                <h4>Modifier l'utilisateur séléctioné</h4>
             </div>
             <div class="login-form mt-4">
                 <form action="" method="POST">

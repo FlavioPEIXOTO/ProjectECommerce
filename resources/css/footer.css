@@ -5,16 +5,16 @@
     height: 50px;
     justify-content: center;
     align-items: center;
-    /* position: absolute; */
+    position: relative;
     width: 100%;
     z-index: 2;
     padding: 14px;
+    bottom: 0;
 }
 
 .lienFooter{
     margin: auto 30px;
     font-size: 15px;
-
 }
 
 .textFooter{

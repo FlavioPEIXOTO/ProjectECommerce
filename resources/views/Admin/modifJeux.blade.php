@@ -18,22 +18,22 @@
                     <hr />
                     <div style="display: flex;">
                         <div style="margin: 10px">
-                            <h5 class="card-title">PS4 : {{$id_jeu->ps4}}</h5>
-                            <h5 class="card-title">PS5 : {{$id_jeu->ps5}}</h5>
-                            <h5 class="card-title">X Box One : {{$id_jeu->xbox_one}}</h5>
-                            <h5 class="card-title">X Box Serie X : {{$id_jeu->xbox_serie_x}}</h5>
-                            <h5 class="card-title">Switch : {{$id_jeu->switch}}</h5>
-                            <h5 class="card-title">PC : {{$id_jeu->pc}}</h5>
+                            <h5 class="card-title" title="ps4">PS4 : {{$id_jeu->ps4}}</h5>
+                            <h5 class="card-title" title="ps5">PS5 : {{$id_jeu->ps5}}</h5>
+                            <h5 class="card-title" title="xboxOne">Xbox One : {{$id_jeu->xbox_one}}</h5>
+                            <h5 class="card-title" title="xboxSerieX">Xbox Serie X : {{$id_jeu->xbox_serie_x}}</h5>
+                            <h5 class="card-title" title="ps4">Switch : {{$id_jeu->switch}}</h5>
+                            <h5 class="card-title" title="ps4">PC : {{$id_jeu->pc}}</h5>
                         </div>
                         <div style="margin:10px;">
-                            <h5 class="card-title">Action : {{$id_jeu->action}}</h5>
-                            <h5 class="card-title">Aventure : {{$id_jeu->aventure}}</h5>
-                            <h5 class="card-title">Jeu de Tir : {{$id_jeu->jeu_de_tir}}</h5>
-                            <h5 class="card-title">RPG : {{$id_jeu->rpg}}</h5>
-                            <h5 class="card-title">Horreur : {{$id_jeu->horreur}}</h5>
-                            <h5 class="card-title">Sport : {{$id_jeu->sport}}</h5>
-                            <h5 class="card-title">Combat : {{$id_jeu->combat}}</h5>
-                            <h5 class="card-title">Course : {{$id_jeu->course}}</h5>
+                            <h5 class="card-title" title="Action">Action : {{$id_jeu->action}}</h5>
+                            <h5 class="card-title" title="Aventure">Aventure : {{$id_jeu->aventure}}</h5>
+                            <h5 class="card-title" title="Jeux de tir">Jeu de Tir : {{$id_jeu->jeu_de_tir}}</h5>
+                            <h5 class="card-title" title="RPG">RPG : {{$id_jeu->rpg}}</h5>
+                            <h5 class="card-title" title="Horreur">Horreur : {{$id_jeu->horreur}}</h5>
+                            <h5 class="card-title" title="Sport">Sport : {{$id_jeu->sport}}</h5>
+                            <h5 class="card-title" title="Combat">Combat : {{$id_jeu->combat}}</h5>
+                            <h5 class="card-title" title="Course">Course : {{$id_jeu->course}}</h5>
                         </div>
                     </div>
                 </div>
@@ -75,29 +75,29 @@
                         <div class="form-group">
                             <label>Catégories (O => Oui / N => Non)</label>
                             <div style="display: flex;">
-                                <input type="text" class="form-control" name="ps5" id="ps5" placeholder="PS5" style="width: 100px;" value="{{$id_jeu->ps5}}">
-                                <input type="text" class="form-control" name="ps4" id="ps4" placeholder="PS4" style="width: 100px;" value="{{$id_jeu->ps4}}">
-                                <input type="text" class="form-control" name="switch" id="switch" placeholder="switch" style="width: 100px;" value="{{$id_jeu->switch}}">
+                                <input type="text" class="form-control" name="ps5" id="ps5" placeholder="PS5" title="PS5" style="width: 100px;" value="{{$id_jeu->ps5}}">
+                                <input type="text" class="form-control" name="ps4" id="ps4" placeholder="PS4" title="PS4" style="width: 100px;" value="{{$id_jeu->ps4}}">
+                                <input type="text" class="form-control" name="switch" id="switch" placeholder="switch" title="switch" style="width: 100px;" value="{{$id_jeu->switch}}">
                             </div>
                             <div style="display: flex">
-                                <input type="text" class="form-control" name="xbox_one" id="xbox_one" placeholder="xbox_one" style="width: 100px;" value="{{$id_jeu->xbox_one}}">
-                                <input type="text" class="form-control" name="xbox_serie_x" id="xbox_serie_x" placeholder="xbox_serie_x" style="width: 100px;" value="{{$id_jeu->xbox_serie_x}}">
-                                <input type="text" class="form-control" name="pc" id="pc" placeholder="PC" style="width: 100px;" value="{{$id_jeu->pc}}">
+                                <input type="text" class="form-control" name="xbox_one" id="xbox_one" placeholder="xbox_one" title="xbox_one" style="width: 100px;" value="{{$id_jeu->xbox_one}}">
+                                <input type="text" class="form-control" name="xbox_serie_x" id="xbox_serie_x" placeholder="xbox_serie_x" title="xbox_serie_x" style="width: 100px;" value="{{$id_jeu->xbox_serie_x}}">
+                                <input type="text" class="form-control" name="pc" id="pc" placeholder="PC" title="PC" style="width: 100px;" value="{{$id_jeu->pc}}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Plateformes (O => Oui / N => Non)</label>
                             <div style="display: flex;">
-                                <input type="text" class="form-control" name="action" id="action" placeholder="Action" style="width: 100px;" value="{{$id_jeu->action}}">
-                                <input type="text" class="form-control" name="aventure" id="aventure" placeholder="Aventure" style="width: 100px;" value="{{$id_jeu->aventure}}">
-                                <input type="text" class="form-control" name="jeu_de_tir" id="jeu_de_tir" placeholder="Jeu de Tir" style="width: 100px;" value="{{$id_jeu->jeu_de_tir}}">
-                                <input type="text" class="form-control" name="rpg" id="rpg" placeholder="RPG" style="width: 100px;" value="{{$id_jeu->rpg}}">
+                                <input type="text" class="form-control" name="action" id="action" placeholder="Action" title="Action" style="width: 100px;" value="{{$id_jeu->action}}">
+                                <input type="text" class="form-control" name="aventure" id="aventure" placeholder="Aventure" title="Aventure" style="width: 100px;" value="{{$id_jeu->aventure}}">
+                                <input type="text" class="form-control" name="jeu_de_tir" id="jeu_de_tir" placeholder="Jeu de Tir" title="Jeu de Tir" style="width: 100px;" value="{{$id_jeu->jeu_de_tir}}">
+                                <input type="text" class="form-control" name="rpg" id="rpg" placeholder="RPG" style="width: 100px;" title="RPG" value="{{$id_jeu->rpg}}">
                             </div>
                             <div style="display: flex;">
-                                <input type="text" class="form-control" name="horreur" id="horreur" placeholder="Horreur" style="width: 100px;" value="{{$id_jeu->horreur}}">
-                                <input type="text" class="form-control" name="sport" id="sport" placeholder="Sport" style="width: 100px;" value="{{$id_jeu->sport}}">
-                                <input type="text" class="form-control" name="combat" id="combat" placeholder="Combat" style="width: 100px;" value="{{$id_jeu->combat}}">
-                                <input type="text" class="form-control" name="course" id="course" placeholder="Course" style="width: 100px;" value="{{$id_jeu->course}}">
+                                <input type="text" class="form-control" name="horreur" id="horreur" placeholder="Horreur" title="Horreur" style="width: 100px;" value="{{$id_jeu->horreur}}">
+                                <input type="text" class="form-control" name="sport" id="sport" placeholder="Sport" title="Sport" style="width: 100px;" value="{{$id_jeu->sport}}">
+                                <input type="text" class="form-control" name="combat" id="combat" placeholder="Combat" title="Combat" style="width: 100px;" value="{{$id_jeu->combat}}">
+                                <input type="text" class="form-control" name="course" id="course" placeholder="Course" title="Course" style="width: 100px;" value="{{$id_jeu->course}}">
                             </div>
                         </div>
                         <div class="form-group">

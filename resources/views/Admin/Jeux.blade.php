@@ -1,5 +1,4 @@
 @extends('layout')
-
 @section('contenu')
 
 <section id="contact">
@@ -28,38 +27,46 @@
                         <input type="text" class="form-control" name="code_activation" id="code_activation" placeholder="Entrer un code d'activation">
                     </div>
                     <div class="form-group">
+                        <label for="editeur_dev">Editeur / Dev</label>
+                        <input type="text" class="form-control" name="editeur_dev" id="editeur_dev" placeholder="Editeur | Dev">
+                    </div>
+                    <div class="form-group">
                         <label for="photo">Selectionner une image</label>
                         <input type="file" class="form-control" name="photo" id="photo">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Catégories (O => Oui / N => Non)</label>
+                        <label>Plateformes (O => Oui / N => Non)</label>
                         <div style="display: flex;">
-                            <input type="text" class="form-control" name="ps5" id="ps5" placeholder="PS5" style="width: 100px;">
-                            <input type="text" class="form-control" name="ps4" id="ps4" placeholder="PS4" style="width: 100px;">
-                            <input type="text" class="form-control" name="switch" id="switch" placeholder="switch" style="width: 100px;">
-                            <input type="text" class="form-control" name="xbox_one" id="xbox_one" placeholder="xbox_one" style="width: 100px;">
-                            <input type="text" class="form-control" name="xbox_serie_x" id="xbox_serie_x" placeholder="xbox_serie_x" style="width: 100px;">
-                            <input type="text" class="form-control" name="pc" id="pc" placeholder="PC" style="width: 100px;">
+                            <input type="text" class="form-control" name="ps5" id="ps5" placeholder="PS5" style="width: 100px;" title="ps5">
+                            <input type="text" class="form-control" name="ps4" id="ps4" placeholder="PS4" style="width: 100px;" title="ps4">
+                            <input type="text" class="form-control" name="switch" id="switch" placeholder="switch" style="width: 100px;" title="switch">
+                            <input type="text" class="form-control" name="xbox_one" id="xbox_one" placeholder="xbox_one" style="width: 100px;" title="xboxOne">
+                            <input type="text" class="form-control" name="xbox_serie_x" id="xbox_serie_x" placeholder="xbox_serie_x" style="width: 120px;" title="xboxSerieX">
+                            <input type="text" class="form-control" name="pc" id="pc" placeholder="PC" style="width: 100px;" title="Pc">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Plateformes (O => Oui / N => Non)</label>
+                        <label>Catégories (O => Oui / N => Non)</label>
                         <div style="display: flex;">
-                            <input type="text" class="form-control" name="action" id="action" placeholder="Action" style="width: 100px;">
-                            <input type="text" class="form-control" name="aventure" id="aventure" placeholder="Aventure" style="width: 100px;">
-                            <input type="text" class="form-control" name="jeu_de_tir" id="jeu_de_tir" placeholder="Jeu de Tir" style="width: 100px;">
-                            <input type="text" class="form-control" name="rpg" id="rpg" placeholder="RPG" style="width: 100px;">
-                            <input type="text" class="form-control" name="horreur" id="horreur" placeholder="Horreur" style="width: 100px;">
-                            <input type="text" class="form-control" name="sport" id="sport" placeholder="Sport" style="width: 100px;">
-                            <input type="text" class="form-control" name="combat" id="combat" placeholder="Combat" style="width: 100px;">
-                            <input type="text" class="form-control" name="course" id="course" placeholder="Course" style="width: 100px;">
+                            <input type="text" class="form-control" name="action" id="action" placeholder="Action" style="width: 90px;" title="Action">
+                            <input type="text" class="form-control" name="aventure" id="aventure" placeholder="Aventure" style="width: 90px;" title="Aventure">
+                            <input type="text" class="form-control" name="jeu_de_tir" id="jeu_de_tir" placeholder="Jeu de Tir" style="width: 96px;" title="Jeux de Tir">
+                            <input type="text" class="form-control" name="rpg" id="rpg" placeholder="RPG" style="width: 90px;" title="RPG">
+                            <input type="text" class="form-control" name="horreur" id="horreur" placeholder="Horreur" style="width: 90px;" title="Horreur">
+                            <input type="text" class="form-control" name="sport" id="sport" placeholder="Sport" style="width: 90px;" title="Sport">
+                            <input type="text" class="form-control" name="combat" id="combat" placeholder="Combat" style="width: 90px;" title="Combat">
+                            <input type="text" class="form-control" name="course" id="course" placeholder="Course" style="width: 90px;" title="Course">
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for ="date_sortie"> Date de Sortie </label>
+                        <input type="date"  class="form-control" name="date_sortie" id="date_sortie">
                     </div>
                     <div class="form-group">
                         <label for ="description"> Description du jeu </label>
-                        <textarea  class="form-control" name="description" id="description" placeholder="Entrer la description produit" rows="8" cols="35"></textarea>
+                        <textarea  class="form-control" name="description" id="description" placeholder="Entrer la description produit" rows="7" cols="40"></textarea>
                     </div>
                     <div>
 
@@ -89,7 +96,7 @@
 
             @foreach ($jeux as $jeu)
           <tr>
-            <th scope="row">1</th>
+            <th scope="row">{{$jeu->id}}</th>
             <td>{{$jeu->nom}}</td>
             <td>{{$jeu->quantite}}</td>
             <td>{{$jeu->prix}}</td>

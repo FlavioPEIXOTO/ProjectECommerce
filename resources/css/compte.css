@@ -4,6 +4,17 @@
 
 /*----------------------------USER COMPTE---------------------*/
 
+.welcome{
+    color: #46829e;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 3rem auto;
+}
+
+#card_compte{
+margin: auto 0;
+}
+
 .section-user{
     width: 100%;
     margin: 20px;
@@ -11,8 +22,28 @@
     justify-content: center;
 }
 
+.section-user a{
+    text-align: center;
+}
+
 .section-jeux-achetes{
     width: 100%;
     display: block;
     margin: 20px;
+}
+
+.button_SignOut{
+    padding: 1rem;
+    letter-spacing: 2px;
+    background-color: #46829e;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.button_SignOut:hover{
+    background-color: white;
+    color: #46829e;
+    transition: 0.8s;
+    border: 2px #46829e solid;
+    box-shadow: 10px 5px 5px #46829e ;
 }

@@ -12,6 +12,8 @@ class Jeux extends Model
     protected $fillable = [
         'nom',
         'description',
+        'date_sortie',
+        'editeur_dev',
         'photo',
         'quantite',
         'prix',

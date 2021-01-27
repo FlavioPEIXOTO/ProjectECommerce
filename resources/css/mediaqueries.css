@@ -1,6 +1,4 @@
-
-                                            /* MEDIAQUERIES */
-                        /* Header */
+                                        /* Header */
 @media (max-width: 768px) {
     #titleHeader{
         font-size: 26px;
@@ -21,9 +19,7 @@
         height: 18px;
         width: 85px;
     }
-    /* .far {
-        display: none;
-    } */
+
     #buttonSearch{
         width: 22px;
         height: 22px;
@@ -68,5 +64,29 @@
 @media (min-width: 62em) {
     .featurette-heading {
         margin-top: 7rem;
+    }
+}
+
+
+                                            /* Produit */
+@media (max-width: 768px) {
+    .produit_unite{
+        padding-top: 5rem;
+    }
+    .img_taille{
+        height: 13rem;
+        margin-top: 3rem;
+    }
+    .container_produit{
+        padding: 0px;
+    }
+
+    .separ{
+        margin: 1rem;
+        height: 70%;
+    }
+    .texte_container{
+        letter-spacing: 1px;
+        font-size: 10px;
     }
 }
