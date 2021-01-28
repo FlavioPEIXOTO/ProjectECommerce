@@ -59,7 +59,8 @@
                         <!-- Produit Unité -->
             <section class="produit_unite">
                 <div class="img_prod">
-                    <img class="img_taille" src="img/Demon'sSoul_ps5.jpg" alt="image du produit">
+                    {{-- <img class="img_taille" src="img/Demon'sSoul_ps5.jpg" alt="image du produit"> --}}
+                    <img class="img_taille" src="img/{{$jeu->photo}}" alt="image du produit">
                 </div>
                 <div class="separ"></div>
 
@@ -72,20 +73,21 @@
                     </div>
                     <div class="texte_container">
                         <p>Date de sorti : {{$jeu->date_sortie}}</p>
-                        <p>Résumé : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate repellendus quaerat earum nemo! Vel totam voluptas perspiciatis rem odit repudiandae, deserunt officiis recusandae maiores? Laudantium aspernatur non totam iusto earum!</p>
+                        <p>Résumé : {{$jeu->description}}</p>
                         <p>Genre : Exemple</p>
-                        <p>Editeur | Developpeur : l'éditeur | la boite de dev</p>
+                        <p>Platforme Disponible : xxx - xxx</p>
+                        <p>Editeur | Developpeur : {{$jeu->editeur_dev}}</p>
                         @if(auth()->check()) 
                             <form action="" method="POST">
                                 {{ csrf_field() }}
-                                <input type="submit" name="submit" class="btn btn-danger btn-block" value="Acheter">
+                                    <input type="submit" name="submit" value="Ajouter au Panier" id="button_buy">
                             </form>
                             {{-- <a href="{{route('confirm.AjoutPanier', ['id' => $jeu->id])}}"><button id="button_buy">Acheter</button></a>                        --}}
                         @else
-                            <a href="/connexion"><button id="button_buy">Vous devez être connecté</button></a>
+                            <a href="/connexion" class="button_buy"><button >Vous devez être connecté</button></a>
                         
                         @endif
-                        
+                         
                     </div>
                 </div>
             </section>

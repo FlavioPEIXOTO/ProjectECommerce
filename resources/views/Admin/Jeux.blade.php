@@ -27,7 +27,7 @@
                         <input type="text" class="form-control" name="code_activation" id="code_activation" placeholder="Entrer un code d'activation">
                     </div>
                     <div class="form-group">
-                        <label for="editeur_dev">Editeur / Dev</label>
+                        <label for="editeur_dev">Editeur | Dev</label>
                         <input type="text" class="form-control" name="editeur_dev" id="editeur_dev" placeholder="Editeur | Dev">
                     </div>
                     <div class="form-group">

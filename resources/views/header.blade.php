@@ -2,7 +2,7 @@
 
     <section class="sectHeader">
         <div class="logoHeader">
-            <a href="index"> <img class="logo" src="img/logo2.jpg"> </a>
+            <a href="/"> <img class="logo" src="img/logo2.jpg"> </a>
         </div>
         <div class="searchHeader">
             <h1 id="titleHeader">GamingShop</h1>
@@ -15,9 +15,10 @@
             <i class="far fa-user" id="compte_logo"></i>
             <select class="lienHeader" id="select_header" name="compte" id="compte" onchange="window.location.href = this.options[this.selectedIndex].value;">
             @if(auth()->check())
-                <option value="">   Mon Compte   </option>
+                <option value="/compte">   Mon Compte </option>
+                {{-- <option value="/Panier8" >Mon Panier</option> --}}
             @else
-                <option value="compte">Se Connecter</option>
+                <option value="/connexion">Se Connecter</option>
             @endif
                 <option value="compte" >Mes infos</option>
                 <option value="/signout">Se déconnecter</option>

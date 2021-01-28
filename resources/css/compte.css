@@ -8,11 +8,12 @@
     color: #46829e;
     text-align: center;
     letter-spacing: 2px;
-    margin: 3rem auto;
+    margin: 2rem auto 1rem auto;
 }
 
 #card_compte{
-margin: auto 0;
+    margin: 0rem 4rem;
+    width: 30rem;
 }
 
 .section-user{
@@ -39,6 +40,7 @@ margin: auto 0;
     color: white;
     border-radius: 10px;
     font-size: 20px;
+    margin: auto 2rem;
 }
 .button_SignOut:hover{
     background-color: white;
@@ -46,4 +48,22 @@ margin: auto 0;
     transition: 0.8s;
     border: 2px #46829e solid;
     box-shadow: 10px 5px 5px #46829e ;
+}
+
+#style_card2{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 1rem;
+}
+
+.img_compte{
+    justify-content: center;
+    text-align: center;
+}
+
+.texte_card_compte{
+    letter-spacing: 2px;
+    color: #6c757d;
+    text-align: justify;
+    margin: 1rem 2rem;
 }

@@ -14,8 +14,9 @@ use App\Models\User as User;
 |
 */
 
+//----------------------------------------Accueil site-----------------------------//
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/index', function () {
@@ -27,7 +28,7 @@ Route::get('/produit', function () {
 });
 
 
-//--------------------------ACCES COMPTES UTILISATEUR OU ADMIN--------------------------//
+//--------------------------ACCES COMPTES UTILISATEUR OU ADMIN + ACHATS--------------------------//
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
 ], function(){
@@ -40,24 +41,31 @@ Route::group([
 
     Route::get('/Users', 'App\Http\Controllers\AccountController@Users');
 
-    Route::get('/Achats', 'App\Http\Controllers\AccountController@Achats');
+    Route::get('/Achats', 'App\Http\Controllers\AchatController@Achats');
 
 });
 
-
-
-
+//----------------------------------GESTION DU PANIER PAR LES USER----------------------------------//
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
 ], function(){
-    Route::get('/Produit/{id}', 'App\Http\Controllers\AchatController@ProduitPage')->name('produit.Page');
-    Route::post('/Produit/{id}', 'App\Http\Controllers\AchatController@confirmAjoutPanier'); //->name('confirm.AjoutPanier');
+    Route::get('/Panier{id}', 'App\Http\Controllers\AchatController@Panier')->name('panier.User');
+    Route::post('/Panier{id}', 'App\Http\Controllers\AchatController@confirmAchatPanier');
+
+    Route::get('/suppPanier', 'App\Http\Controllers\AchatController@suppPanier')->name('supp.Panier');
+    Route::post('/suppPanier', 'App\Http\Controllers\AchatController@confirmsuppPanier');
+});
+
+//--------------------------Affichage des produits et leurs informations-------------/
+Route::group([
+    'middleware' => 'App\Http\Middleware\Auth',
+], function(){
+    Route::get('/Produit{id}', 'App\Http\Controllers\AchatController@ProduitPage')->name('produit.Page');
+    Route::post('/Produit{id}', 'App\Http\Controllers\AchatController@confirmAjoutPanier'); //->name('confirm.AjoutPanier');
 });
 
 
 //--------------------------ADMINISTRATION --> PARTIE JEU--------------------------//
-
-
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
 ], function(){
@@ -68,6 +76,7 @@ Route::group([
 });
 
 
+//---------------------------------GESTION DES JEUX --> MODIFICATION-------------------------//
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
 ], function(){
@@ -78,7 +87,10 @@ Route::group([
     
 });
 
+//-----------------------------------PAGE PRODUIT----------------------/
 Route::get('/produit', 'App\Http\Controllers\AchatController@ProduitPage');
+
+
 //--------------------------FORMULAIRES CONNEXION INSCRIPTION--------------------------//
 Route::get('/inscription', 'App\Http\Controllers\InscriptionController@formulaire');
 Route::post('/inscription', 'App\Http\Controllers\InscriptionController@inscription');
@@ -86,11 +98,8 @@ Route::post('/inscription', 'App\Http\Controllers\InscriptionController@inscript
 Route::get('/connexion', 'App\Http\Controllers\ConnexionController@formulaire');
 Route::post('/connexion', 'App\Http\Controllers\ConnexionController@connexion');
 
+
 //--------------------------ADMINISTRATION --> PARTIE MODIF USER--------------------------//
-
-
-
-
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
 ], function(){
@@ -100,6 +109,9 @@ Route::group([
     Route::post('/{id}', 'App\Http\Controllers\AccountController@confirmModif');
 });
 
-// MAIL
+// ----------------------------MAIL---------------------------//
 Route::get("email", "SignUp@formSignUp");
 Route::post("email", "SignUp@sendSignUp")->name('send.SignUp');
+
+Route::get("/confirmAjoutPanier", 'App\Http\Controllers\AccountController@confirmPanier');
+

@@ -75,7 +75,7 @@
                     <img class="first-slide" src="../img/Halo5_xbox.jpg" alt="First slide for PS5">
                     <div class="container">
                     <div class="carousel-caption">
-                        <a class="btn btn-lg btn-primary" href="produit" role="button">Voir le Produit</a>
+                        <a class="btn btn-lg btn-primary" href="{{route('produit.Page', ['id' => 3])}}" role="button" target="_blank">Voir le Produit</a>
                     </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                     <img class="second-slide" src="img/Hitman3_ps4.jpg" alt="Second slide for Hitman 3">
                     <div class="container">
                     <div class="carousel-caption">
-                        <a class="btn btn-lg btn-primary" href="produit" role="button">Voir le Produit</a>
+                        <a class="btn btn-lg btn-primary" href="{{route('produit.Page', ['id' => 4])}}" role="button">Voir le Produit</a>
                     </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                     <img class="third-slide" src="img/Fifa21_ps5.jpg" alt="Third slide for FIFA 5">
                     <div class="container">
                     <div class="carousel-caption">
-                        <a class="btn btn-lg btn-primary" href="produit" role="button">Voir le Produit</a>
+                        <a class="btn btn-lg btn-primary" href="{{route('produit.Page', ['id' => 2])}}" role="button">Voir le Produit</a>
                     </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
 
 
             <!-- Listes des produits -->
-            <div class="row row-cols-1 row-cols-md-3 g-0" >
+            <div class="row row-cols-1 row-cols-md-3 g-0" id="row_style">
                     <div class="card">
                         <div class="prez">
                             <img src="img/PS5.jpg" class="img_accueil" alt="PS5">
@@ -165,7 +165,7 @@
                                 <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
                             </div>
                         </div>
-                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
+                        <a href="{{route('produit.Page', ['id' => 5])}}" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
@@ -175,7 +175,7 @@
                                 <p class="card-text">La toute nouvelle console de chez PlayStation, la PS5</p>
                             </div>
                         </div>
-                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
+                        <a href="{{route('produit.Page', ['id' => 6])}}" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
@@ -185,7 +185,7 @@
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
-                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
+                        <a href="{{route('produit.Page', ['id' => 7])}}" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
@@ -195,7 +195,7 @@
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
-                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
+                        <a href="{{route('produit.Page', ['id' => 2])}}" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
@@ -205,7 +205,7 @@
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
-                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
+                        <a href="{{route('produit.Page', ['id' => 4])}}" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
@@ -215,7 +215,7 @@
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
-                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
+                        <a href="{{route('produit.Page', ['id' => 8])}}" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
@@ -225,7 +225,7 @@
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
-                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
+                        <a href="{{route('produit.Page', ['id' => 9])}}" class="btn btn-primary">Voir le Produit</a>
                     </div>
                     <div class="card">
                         <div class="prez">
@@ -235,7 +235,7 @@
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
-                        <a href="produit" class="btn btn-primary">Voir le Produit</a>
+                        <a href="{{route('produit.Page', ['id' => 10])}}" class="btn btn-primary">Voir le Produit</a>
                     </div>
 
                 <!-- </div> -->

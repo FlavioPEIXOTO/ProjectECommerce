@@ -16,7 +16,7 @@ class CreatePaniersTable extends Migration
         Schema::create('paniers', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->integer('jeu1');
+            $table->integer('jeu1')->nullable();
             $table->integer('jeu2')->nullable();
             $table->integer('jeu3')->nullable();
             $table->integer('jeu4')->nullable();

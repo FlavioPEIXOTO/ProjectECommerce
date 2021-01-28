@@ -1,12 +1,12 @@
-
 .sectHeader{
     position: fixed;
     width: 100%;
     position: relative;
     display: flex;
     flex-direction: row;
-    background-color: #ECEBE6;
-    /* color: #7A6458; */
+    /* background-color: #ECEBE6; */
+    /* background: linear-gradient(to left, #967757 , #ECEBE6); */
+    background: linear-gradient(to left, rgba(150, 119, 87, 0.7) , #ECEBE6);
     color: #715639;
 
 }
@@ -22,6 +22,7 @@
 #titleHeader{
     /* text-transform: uppercase; */
     font-family: 'Copperplate Gothic Bold', sans-serif;
+    letter-spacing: 8px;
 }
 
 .searchHeader{
@@ -57,6 +58,7 @@
 #buttonSearch{
     width: 35px;
     height: 35px;
+    margin: auto 1rem;
 }
 
 /* #compte{
