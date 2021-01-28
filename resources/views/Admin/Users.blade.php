@@ -22,7 +22,7 @@
                         <td class="even">{{$utilisateur->name}}</td>
                         <td class="odd">{{$utilisateur->birth_date}}</td>
                         <td class="even">{{$utilisateur->email}}</td>
-                        <td class="odd"><a href="{{route('panier.User', ['id' => $utilisateur->id])}}" class="button">Modifier</a></td>
+                        <td class="odd"><a href="{{route('infos.User', ['id' => $utilisateur->id])}}" class="button">Modifier</a></td>
                     </tr>
                 @endforeach
         </table>
